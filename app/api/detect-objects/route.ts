@@ -1,7 +1,6 @@
-import { utapi } from '@/utils/uploadthing';
 import { pipeline } from '@xenova/transformers';
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
   const formData = await req.formData();
   const files = formData.getAll('files');
   // @ts-ignore
